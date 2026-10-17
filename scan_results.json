@@ -1,0 +1,792 @@
+{
+ "title": "Big Ten Conference",
+ "scanned_at": "2026-10-17T20:36:33Z",
+ "resolver": "system default",
+ "scanner_version": "1.0",
+ "sample_data": false,
+ "domains": [
+  {
+   "name": "University of Illinois Urbana-Champaign",
+   "short": "Illinois",
+   "domain": "illinois.edu",
+   "state": "IL",
+   "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "count": 1,
+    "valid": true,
+    "policy": "none",
+    "subdomain_policy": "none",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 redirect=_spf.illinois.edu",
+    "count": 1,
+    "valid": true,
+    "all": "-",
+    "lookups": 3,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "incoming-relays.illinois.edu"
+    ],
+    "provider": "Self-hosted / other"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 50,
+   "grade": "D",
+   "notes": [
+    "DMARC is set to monitor only (p=none): spoofed mail is reported, not blocked."
+   ],
+   "verdict": "not_blocked",
+   "error": null
+  },
+  {
+   "name": "Indiana University",
+   "short": "Indiana",
+   "domain": "iu.edu",
+   "state": "IN",
+   "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;",
+    "count": 1,
+    "valid": true,
+    "policy": "reject",
+    "subdomain_policy": "reject",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com include:_spf.qualtrics.com include:_spf.elasticemail.com include:_spf.bigcommerce.com -all",
+    "count": 1,
+    "valid": true,
+    "all": "-",
+    "lookups": 5,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "iu-edu.mail.protection.outlook.com"
+    ],
+    "provider": "Microsoft 365"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 80,
+   "grade": "B",
+   "notes": [],
+   "verdict": "rejected",
+   "error": null
+  },
+  {
+   "name": "University of Iowa",
+   "short": "Iowa",
+   "domain": "uiowa.edu",
+   "state": "IA",
+   "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; rua=mailto:3tuotr4q@ag.dmarcian.com",
+    "count": 1,
+    "valid": true,
+    "policy": "reject",
+    "subdomain_policy": "reject",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 ip4:128.255.224.128/26 ip4:128.255.173.0/25 ip4:128.255.6.0/23 ip4:128.255.66.0/23 ip4:129.255.116.16 ip4:128.255.224.0/25 ip6:2620:0:e50:6500::0/64 ip4:128.255.140.0/23 ip6:2620:0:e50:6900::0/64 include:spf.protection.outlook.com include:spf-001c0c01.pphosted.com -all",
+    "count": 1,
+    "valid": true,
+    "all": "-",
+    "lookups": 2,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "uiowa-edu.mail.protection.outlook.com"
+    ],
+    "provider": "Microsoft 365"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 80,
+   "grade": "B",
+   "notes": [],
+   "verdict": "rejected",
+   "error": null
+  },
+  {
+   "name": "University of Maryland",
+   "short": "Maryland",
+   "domain": "umd.edu",
+   "state": "MD",
+   "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; rua=mailto:qir62vov@ag.us.dmarcian.com,mailto:dmarc@umd.edu",
+    "count": 1,
+    "valid": true,
+    "policy": "none",
+    "subdomain_policy": "none",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 exists:%{ir}.%{v}._spf.umd_spf.aws.umd.edu include:_spf.salesforce.com ~exists:%{ir}.%{v}.x._spf.umd_spf.aws.umd.edu ip4:68.232.142.226 ip4:68.232.131.46 ip4:216.71.149.111 ip4:216.71.149.190 ip4:68.232.143.84 ip4:68.232.137.73 ip4:216.71.140.161 ip4:216.71.140.163 ip4:128.8.162.133 ip4:128.8.15.34 ip4:128.8.13.14 ip4:128.8.162.94 ip4:209.164.1.194 ip4:54.144.73.133 ip4:54.172.225.123 ip4:168.245.25.116 include:_spf.umd.edu include:_spf.google.com a:c.spf.service-now.com ~all",
+    "count": 1,
+    "valid": true,
+    "all": "~",
+    "lookups": 9,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "mx1.umd.iphmx.com",
+     "mx2.umd.iphmx.com"
+    ],
+    "provider": "Cisco Secure Email"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 42,
+   "grade": "D",
+   "notes": [
+    "DMARC is set to monitor only (p=none): spoofed mail is reported, not blocked."
+   ],
+   "verdict": "not_blocked",
+   "error": null
+  },
+  {
+   "name": "University of Michigan",
+   "short": "Michigan",
+   "domain": "umich.edu",
+   "state": "MI",
+   "dmarc": {
+    "record": "v=DMARC1;p=none;pct=100;rua=mailto:dmarc.reports@umich.edu",
+    "count": 1,
+    "valid": true,
+    "policy": "none",
+    "subdomain_policy": "none",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 redirect=_spf.mail.umich.edu",
+    "count": 1,
+    "valid": true,
+    "all": "~",
+    "lookups": 4,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "mx1.a.mail.umich.edu",
+     "mx2.a.mail.umich.edu"
+    ],
+    "provider": "Self-hosted / other"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 42,
+   "grade": "D",
+   "notes": [
+    "DMARC is set to monitor only (p=none): spoofed mail is reported, not blocked."
+   ],
+   "verdict": "not_blocked",
+   "error": null
+  },
+  {
+   "name": "Michigan State University",
+   "short": "Michigan State",
+   "domain": "msu.edu",
+   "state": "MI",
+   "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:its.dmarc@msu.edu; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:its.dmarc@msu.edu",
+    "count": 1,
+    "valid": true,
+    "policy": "none",
+    "subdomain_policy": "none",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 ip4:35.8.0.0/13 ip4:207.74.148.0/24 ip4:192.231.113.0/24 ip4:162.247.216.0/22 ip4:66.151.109.0/24 ip4:34.194.230.233 ip4:34.230.107.215 ip4:148.163.147.0/24 ip4:148.163.143.0/24 include:_external.mail.msu.edu include:_external2.mail.msu.edu -all",
+    "count": 1,
+    "valid": true,
+    "all": "-",
+    "lookups": 7,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "mxa-00165801.gslb.pphosted.com",
+     "mxb-00165801.gslb.pphosted.com"
+    ],
+    "provider": "Proofpoint"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 50,
+   "grade": "D",
+   "notes": [
+    "DMARC is set to monitor only (p=none): spoofed mail is reported, not blocked."
+   ],
+   "verdict": "not_blocked",
+   "error": null
+  },
+  {
+   "name": "University of Minnesota",
+   "short": "Minnesota",
+   "domain": "umn.edu",
+   "state": "MN",
+   "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; sp=reject; rua=mailto:dmarcrpt@umn.edu; ruf=mailto:dmarcrpt@umn.edu",
+    "count": 1,
+    "valid": true,
+    "policy": "reject",
+    "subdomain_policy": "reject",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 include:_spf.google.com include:servers.mcsv.net include:_spf.umn.edu ?all",
+    "count": 1,
+    "valid": true,
+    "all": "?",
+    "lookups": 6,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "mta-p10.oit.umn.edu",
+     "mta-p11.oit.umn.edu",
+     "mta-p12.oit.umn.edu",
+     "mta-p13.oit.umn.edu",
+     "mta-p14.oit.umn.edu"
+    ],
+    "provider": "Self-hosted / other"
+   },
+   "extras": {
+    "mta_sts": true,
+    "tls_rpt": true,
+    "bimi": false
+   },
+   "score": 75,
+   "grade": "B",
+   "notes": [],
+   "verdict": "rejected",
+   "error": null
+  },
+  {
+   "name": "University of Nebraska-Lincoln",
+   "short": "Nebraska",
+   "domain": "unl.edu",
+   "state": "NE",
+   "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:jfmyq2sa@ag.us.dmarcian.com;",
+    "count": 1,
+    "valid": true,
+    "policy": "reject",
+    "subdomain_policy": "reject",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 include:spf1.unl.edu include:spf2.unl.edu include:spf3.unl.edu include:spf.protection.outlook.com include:amazonses.com include:servers.mcsv.net include:spf.constantcontact.com include:e2ma.net include:spf.us.odmad.quest-on-demand.com -all",
+    "count": 1,
+    "valid": true,
+    "all": "-",
+    "lookups": 9,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "mxa-00246402.gslb.pphosted.com",
+     "mxb-00246402.gslb.pphosted.com",
+     "mx0a-00246402.pphosted.com",
+     "mx0b-00246402.pphosted.com"
+    ],
+    "provider": "Proofpoint"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 80,
+   "grade": "B",
+   "notes": [],
+   "verdict": "rejected",
+   "error": null
+  },
+  {
+   "name": "Northwestern University",
+   "short": "Northwestern",
+   "domain": "northwestern.edu",
+   "state": "IL",
+   "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "count": 1,
+    "valid": true,
+    "policy": "none",
+    "subdomain_policy": "none",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 include:_netblocks.northwestern.edu include:_thirdparty3.northwestern.edu include:_thirdparty4.northwestern.edu include:servers.mcsv.net include:cust-spf.exacttarget.com include:mail.zendesk.com include:et._spf.pardot.com ip4:176.31.145.254 ?all",
+    "count": 1,
+    "valid": true,
+    "all": "?",
+    "lookups": 9,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "chcspprf10.ads.northwestern.edu",
+     "chcspprf11.ads.northwestern.edu",
+     "chcspprf12.ads.northwestern.edu",
+     "evcspprf10.ads.northwestern.edu",
+     "evcspprf11.ads.northwestern.edu"
+    ],
+    "provider": "Self-hosted / other"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 30,
+   "grade": "F",
+   "notes": [
+    "DMARC is set to monitor only (p=none): spoofed mail is reported, not blocked."
+   ],
+   "verdict": "not_blocked",
+   "error": null
+  },
+  {
+   "name": "The Ohio State University",
+   "short": "Ohio State",
+   "domain": "osu.edu",
+   "state": "OH",
+   "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=reject; rua=mailto:dmarc_agg@vali.email,mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com; fo=1;",
+    "count": 1,
+    "valid": true,
+    "policy": "reject",
+    "subdomain_policy": "reject",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 ip4:140.254.54.0/26 ip4:131.187.90.204 ip4:131.187.90.205 ip4:128.146.86.128/27 ip4:128.146.193.0/27 ip4:128.146.163.0/26 ip4:148.163.151.149 ip4:148.163.155.97 ip4:128.146.138.0/25 ip4:128.146.17.48 ip4:128.146.17.76 ip4:128.146.17.77 ip4:128.146.163.14 ip4:128.146.163.18 ip4:128.146.163.21 include:spf1.osu.edu include:spf.protection.outlook.com ~all",
+    "count": 1,
+    "valid": true,
+    "all": "~",
+    "lookups": 7,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "mxa-002cfd01.gslb.pphosted.com",
+     "mxb-002cfd01.gslb.pphosted.com"
+    ],
+    "provider": "Proofpoint"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 72,
+   "grade": "B",
+   "notes": [],
+   "verdict": "rejected",
+   "error": null
+  },
+  {
+   "name": "University of Oregon",
+   "short": "Oregon",
+   "domain": "uoregon.edu",
+   "state": "OR",
+   "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:rua@uoregon.edu,mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com; fo=1; adkim=r; aspf=r; pct=100; rf=afrf; ri=86400; sp=none;",
+    "count": 1,
+    "valid": true,
+    "policy": "none",
+    "subdomain_policy": "none",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com mx ip4:128.223.0.0/16 ip4:163.41.128.0/17 ip4:184.171.0.0/17 ip6:2001:468:d00::/40 ip6:2607:8400::/32 ip4:148.163.128.0/19 ip4:72.10.180.28/31 include:spf.protection.outlook.com ~all",
+    "count": 1,
+    "valid": true,
+    "all": "~",
+    "lookups": 3,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "mxa-000bfd01.gslb.pphosted.com",
+     "mxb-000bfd01.gslb.pphosted.com"
+    ],
+    "provider": "Proofpoint"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 42,
+   "grade": "D",
+   "notes": [
+    "DMARC is set to monitor only (p=none): spoofed mail is reported, not blocked."
+   ],
+   "verdict": "not_blocked",
+   "error": null
+  },
+  {
+   "name": "Penn State University",
+   "short": "Penn State",
+   "domain": "psu.edu",
+   "state": "PA",
+   "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarcreports@psu.edu,mailto:dmarc_agg@vali.email; ruf=mailto:dmarcforensics@psu.edu",
+    "count": 1,
+    "valid": true,
+    "policy": "none",
+    "subdomain_policy": "none",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com ip4:128.118.0.0/16 ip4:146.186.0.0/16 ip4:130.203.0.0/16 include:cust-spf.cashnet.com ?all",
+    "count": 1,
+    "valid": true,
+    "all": "?",
+    "lookups": 2,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "psu-edu.mail.protection.outlook.com",
+     "tr10g04.aset.psu.edu",
+     "tr10g05.aset.psu.edu",
+     "tr16g04.aset.psu.edu"
+    ],
+    "provider": "Microsoft 365"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 30,
+   "grade": "F",
+   "notes": [
+    "DMARC is set to monitor only (p=none): spoofed mail is reported, not blocked."
+   ],
+   "verdict": "not_blocked",
+   "error": null
+  },
+  {
+   "name": "Purdue University",
+   "short": "Purdue",
+   "domain": "purdue.edu",
+   "state": "IN",
+   "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc_agg@vali.email,mailto:dmarc-reports@purdue.edu; fo=1",
+    "count": 1,
+    "valid": true,
+    "policy": "quarantine",
+    "subdomain_policy": "quarantine",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 include:%{i}._ip.%{h}._ehlo.%{d}._spf.vali.email include:spf.protection.outlook.com ~all",
+    "count": 1,
+    "valid": true,
+    "all": "~",
+    "lookups": 2,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "purdue-edu.mail.protection.outlook.com"
+    ],
+    "provider": "Microsoft 365"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 57,
+   "grade": "C",
+   "notes": [],
+   "verdict": "spam",
+   "error": null
+  },
+  {
+   "name": "Rutgers University",
+   "short": "Rutgers",
+   "domain": "rutgers.edu",
+   "state": "NJ",
+   "dmarc": {
+    "record": "v=DMARC1; p=quarantine; pct=100; rua=mailto:ru_rua_reports@oit.rutgers.edu;ruf=mailto:ru_ruf_reports@oit.rutgers.edu; sp=quarantine; adkim=r; aspf=r; fo=0:d;",
+    "count": 1,
+    "valid": true,
+    "policy": "quarantine",
+    "subdomain_policy": "quarantine",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": null,
+    "count": 0,
+    "valid": false,
+    "all": "missing"
+   },
+   "mx": {
+    "hosts": [
+     "mx2.rutgers.edu",
+     "mx2kb.rutgers.edu"
+    ],
+    "provider": "Self-hosted / other"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 35,
+   "grade": "F",
+   "notes": [
+    "SPF record is missing or duplicated, so SPF checks fail."
+   ],
+   "verdict": "spam",
+   "error": null
+  },
+  {
+   "name": "University of California Los Angeles",
+   "short": "UCLA",
+   "domain": "ucla.edu",
+   "state": "CA",
+   "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; rua=mailto:dmarc@it.ucla.edu",
+    "count": 1,
+    "valid": true,
+    "policy": "none",
+    "subdomain_policy": "none",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 ip4:128.97.0.0/16 ip4:149.142.0.0/16 ip4:131.179.0.0/16 ip4:164.67.0.0/16 ip4:169.232.0.0/16 ip4:20.114.37.244/30 ip6:2607:f010::/32 include:everbridge.net include:_spf.google.com include:spf.protection.outlook.com include:_spf.salesforce.com a:c.spf.service-now.com ?all",
+    "count": 1,
+    "valid": true,
+    "all": "?",
+    "lookups": 7,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "smtp.google.com"
+    ],
+    "provider": "Google Workspace"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 30,
+   "grade": "F",
+   "notes": [
+    "DMARC is set to monitor only (p=none): spoofed mail is reported, not blocked."
+   ],
+   "verdict": "not_blocked",
+   "error": null
+  },
+  {
+   "name": "University of Southern California",
+   "short": "USC",
+   "domain": "usc.edu",
+   "state": "CA",
+   "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "count": 1,
+    "valid": true,
+    "policy": "none",
+    "subdomain_policy": "none",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ~all",
+    "count": 1,
+    "valid": true,
+    "all": "~",
+    "lookups": 1,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "mx0a-00164701.pphosted.com",
+     "mx0b-00164701.pphosted.com"
+    ],
+    "provider": "Proofpoint"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 42,
+   "grade": "D",
+   "notes": [
+    "DMARC is set to monitor only (p=none): spoofed mail is reported, not blocked."
+   ],
+   "verdict": "not_blocked",
+   "error": null
+  },
+  {
+   "name": "University of Washington",
+   "short": "Washington",
+   "domain": "uw.edu",
+   "state": "WA",
+   "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "count": 1,
+    "valid": true,
+    "policy": "none",
+    "subdomain_policy": "none",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "r",
+    "aspf": "r"
+   },
+   "spf": {
+    "record": "v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ?all",
+    "count": 1,
+    "valid": true,
+    "all": "?",
+    "lookups": 1,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "mxa-00641c01.gslb.pphosted.com",
+     "mxb-00641c01.gslb.pphosted.com"
+    ],
+    "provider": "Proofpoint"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": false,
+    "bimi": false
+   },
+   "score": 30,
+   "grade": "F",
+   "notes": [
+    "DMARC is set to monitor only (p=none): spoofed mail is reported, not blocked."
+   ],
+   "verdict": "not_blocked",
+   "error": null
+  },
+  {
+   "name": "University of Wisconsin-Madison",
+   "short": "Wisconsin",
+   "domain": "wisc.edu",
+   "state": "WI",
+   "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@wisc.edu; adkim=s; aspf=s;",
+    "count": 1,
+    "valid": true,
+    "policy": "quarantine",
+    "subdomain_policy": "quarantine",
+    "pct": 100,
+    "reporting": true,
+    "adkim": "s",
+    "aspf": "s"
+   },
+   "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com include:_spf.wiscmail.wisc.edu include:spf-007b0c01.pphosted.com ~all",
+    "count": 1,
+    "valid": true,
+    "all": "~",
+    "lookups": 3,
+    "over_limit": false
+   },
+   "mx": {
+    "hosts": [
+     "mxa-007b0c01.gslb.pphosted.com",
+     "mxb-007b0c01.gslb.pphosted.com",
+     "mx0a-007b0c01.pphosted.com",
+     "mx0b-007b0c01.pphosted.com"
+    ],
+    "provider": "Proofpoint"
+   },
+   "extras": {
+    "mta_sts": false,
+    "tls_rpt": true,
+    "bimi": false
+   },
+   "score": 62,
+   "grade": "C",
+   "notes": [],
+   "verdict": "spam",
+   "error": null
+  }
+ ]
+}
